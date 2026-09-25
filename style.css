@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --glow-color: #d4a574;       /* ganti warna glow di sini */
+  --glow-size: 10px;           /* seberapa nyebar glow-nya */
+  --glow-intensity: 0.6;       /* 0 = ga keliatan, 1 = terang banget */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #3d2817; /* warna coklat solid buat sisa layar */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  min-height: 100vh;
+  background: url('assets/background.png') center/cover no-repeat;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.border-top {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.border-bottom {
+  width: 80%;
+  max-width: 300px;
+  margin: 40px auto 0;
+  display: block;
+}
+
+.profile img {
+  width: 155px;
+  height: 155px;
+  object-fit: contain;
+  object-position: center;
+  margin: 10px auto;
+  display: block;
+  filter: drop-shadow(0 0 12px color(var(--glow-color) / var(--glow-intensity)));
+}
+
+.name {
+  font-family: 'Italianno', cursive;
+  font-size: 48px; /* Italianno itu kecil, harus dibesarkin */
+  font-weight: 400;
+  margin: 15px 0 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.quote {
+  font-family: 'ITIM', cursive;
+  font-size: 16px;
+  font-style: normal; /* ITIM udah handwriting, ga perlu italic */
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+.btn {
+  display: block;
+  margin: 12px auto;
+  max-width: 320px;
+  transition: 0.3s;
+  box-shadow: 0 0 var(--glow-size) rgba(212, 165, 116, var(--glow-intensity));
+}
+
+.btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
